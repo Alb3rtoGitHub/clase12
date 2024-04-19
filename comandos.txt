@@ -2,24 +2,58 @@
 git init -> inicializamos un repositorio
 clear -> limpiamos consola
 
+--configuracion global
 git config --global user.name
 git config --global user.email
---ver configuracion--
-git config --get user.name
-git config --get user.email 
---configuración a nivel local,repositorio en el que estás trabajando--
+
+--configuración local
 git config --local user.name
 git config --local user.email
 
-*************************************************************
-git status -> informacion de tu rama actual
+--ver configuracion
+git config --get user.name
+git config --get user.email
 
+crear archivo .gitignore
+
+***** REALIZAR CAMBIOS *****
+git status -> informacion de tu rama actual
 git add . -> agregamos todos los archivos
 git add <nombre_archivo> -> especificamos archivo
-
-git commit -m "mensaje" -> realizar un commit en Git con un mensaje de confirmación
-escapar del editor: "esc + :wq"
+git commit -m "mensaje" -> realizar commit
 
 --ver historial de cambios
 git log 
 git log --oneline
+
+--volver a cambios anteriores
+git checkout: Cambia entre ramas o versiones.
+git revert: Deshace un commit específico creando un nuevo commit
+git reset --hard: Revierte cambios en commit
+
+escapar del editor: "esc + :wq"
+
+***** RAMAS *****
+
+git branch: Lista de ramas.
+git branch [nombre]: Crea nueva rama.
+git checkout [nombre]: Cambia de rama.
+git checkout -b [nombre]: Crea y cambia.
+git merge [nombre]: Fusiona una rama.
+git branch -d [nombre]: Elimina rama.
+git branch -D [nombre]: Elimina forzadamente rama.
+git push origin [nombre]: Sube rama.
+git push origin --delete [nombre]: Elimina rama remota.
+git fetch: Descarga cambios remotos.
+git pull: Descarga y fusiona cambios.
+
+***** REPOSITORIO REMOTO *****
+git pull: trae cambios del remoto
+git push origin [nombre rama]:subimos cambios
+
+
+Pull request:(solicitud de extracción)
+Solicitud para fusionar los cambios realizados en una rama de un repositorio Git con otra rama.
+Permite a los colaboradores proponer cambios en un proyecto, proporcionando una manera de revisar, discutir y validar esos cambios antes de su incorporación definitiva al repositorio principal.
+Una vez que el pull request es aprobado, los cambios pueden ser fusionados en la rama principal del repositorio.
+
